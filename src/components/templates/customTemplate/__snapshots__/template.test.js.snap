@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default template matches snapshot 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    Rendered with custom template
+  </h1>
+  <p>
+    Adding change to custom template
+  </p>
+  <pre>
+    {
+  "foo": "bar"
+}
+  </pre>
+</div>
+`;

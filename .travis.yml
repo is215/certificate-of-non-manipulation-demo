@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - lts/*
+cache: npm install
+addons:
+  sonarqube: true
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm run lint
+        - npm run test-coverage
+        - ./scripts/sonar-runner.sh
+stages:
+  - test
