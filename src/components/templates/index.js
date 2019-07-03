@@ -5,10 +5,10 @@
 
 // TODO: Use dynamic loading to prevent all templates to be loaded at once.
 import DefaultTemplate from "./default";
-import CustomTemplate from "./customTemplate";
+import CNMTemplate from "./certificateOfNonManipulation";
 
 export default {
   default: DefaultTemplate,
-  CUSTOM_TEMPLATE: CustomTemplate,
+  CERTIFICATE_OF_NON_MANIPULATION: CNMTemplate,
   NULL: []
 };
