@@ -49,8 +49,8 @@ it("initialise and save connection to parent on mount to parentFrameConnection",
 it("calls parent frame's updateHeight when updateParentHeight is called", async () => {
   const component = shallow(<DocumentViewerContainer />);
   resetMocks();
-  await component.instance().updateParentHeight(1337);
-  expect(mockParent.updateHeight).toHaveBeenCalledWith(1337);
+  await component.instance().updateParentHeight();
+  expect(mockParent.updateHeight).toHaveBeenCalledWith(0);
 });
 
 it("calls parent frame's updateTemplates when updateParentTemplateTabs is called", async () => {

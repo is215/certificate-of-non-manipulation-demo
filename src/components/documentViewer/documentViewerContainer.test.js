@@ -46,5 +46,5 @@ it("does not crash when updateParentTemplateTabs is called when not in iframe", 
 
 it("does not crash when updateParentHeight is called when not in iframe", () => {
   const component = shallow(<DocumentViewerContainer />);
-  component.instance().updateParentHeight(1);
+  component.instance().updateParentHeight();
 });
