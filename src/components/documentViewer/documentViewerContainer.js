@@ -20,12 +20,17 @@ class DocumentViewerContainer extends Component {
     };
   }
 
+  updateHeightWhenResize() {
+    window.addEventListener("resize", this.updateParentHeight);
+  }
+
   // Use postMessage to update iframe's parent to scale the height
-  async updateParentHeight(height) {
+  async updateParentHeight() {
     if (inIframe()) {
       const { parentFrameConnection } = this.state;
       const parent = await parentFrameConnection;
-      if (parent.updateHeight) await parent.updateHeight(height);
+      if (parent.updateHeight)
+        await parent.updateHeight(document.documentElement.offsetHeight);
     }
   }
 
@@ -49,9 +54,7 @@ class DocumentViewerContainer extends Component {
 
   componentDidUpdate() {
     this.updateParentTemplateTabs();
-    this.updateParentHeight(
-      document.documentElement.offsetHeight + HEIGHT_OFFSET
-    );
+    this.updateParentHeight();
   }
 
   componentDidMount() {
@@ -72,6 +75,7 @@ class DocumentViewerContainer extends Component {
       }).promise;
       this.setState({ parentFrameConnection });
     }
+    this.updateHeightWhenResize();
   }
 
   render() {
