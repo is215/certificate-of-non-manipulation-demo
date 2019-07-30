@@ -28,15 +28,9 @@ const Header = document => (
     <div className="col-12 col-md-6" style={borderStyle}>
       <div className="d-flex flex-column justify-content-between h-100">
         <div className="row m-3">
-          <div className="col-4 p-2">
-            <img
-              src="/images/logo.png"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
           <div className={`col-8 p-2 ${noParaSpace}`}>
             <p>
-              <strong>SINGAPORE CUSTOMS</strong>
+              <strong>DEMO CUSTOMS</strong>
             </p>
             <p>55 Newton Road</p>
             <p>#07-01 Revenue House</p>
