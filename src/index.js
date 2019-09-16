@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import DocumentViewer from "./components/documentViewer";
+import BillOfLading from "./components/templates/BillOfLading/template";
 
-ReactDOM.render(<DocumentViewer />, document.getElementById("root"));
+ReactDOM.render(<BillOfLading />, document.getElementById("root"));
