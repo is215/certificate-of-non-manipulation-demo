@@ -6,9 +6,11 @@
 // TODO: Use dynamic loading to prevent all templates to be loaded at once.
 import DefaultTemplate from "./default";
 import CNMTemplate from "./certificateOfNonManipulation";
+import BLTemplate from "./billOfLading";
 
 export default {
   default: DefaultTemplate,
   CERTIFICATE_OF_NON_MANIPULATION: CNMTemplate,
+  BILL_OF_LADING: BLTemplate,
   NULL: []
 };
