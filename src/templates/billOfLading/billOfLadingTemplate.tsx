@@ -10,9 +10,9 @@ const borderStyle = {
   borderColor: "#000"
 };
 
-const smallText = (text: string) => <div style={{ fontSize: "0.8em" }}>{text}</div>;
+const smallText = (text: string): JSX.Element => <div style={{ fontSize: "0.8em" }}>{text}</div>;
 
-const Section3 = () => (
+const Section3 = (): JSX.Element => (
   <div style={borderStyle}>
     <div className="row">
       <div className="col-3 p-2" style={{ minHeight: 100, ...borderStyle }}>
@@ -95,7 +95,7 @@ const Section3 = () => (
   </div>
 );
 
-const Section2 = (document: BLCertificate) => {
+const Section2 = (document: BLCertificate): JSX.Element => {
   const packages = document.packages || [];
   const renderedKindOfPackage = packages.map((pkg, index) => <div key={index}>{pkg.description}</div>);
   const renderedWeight = packages.map((pkg, index) => <div key={index}>{pkg.weight}</div>);
@@ -125,7 +125,7 @@ const Section2 = (document: BLCertificate) => {
   );
 };
 
-const Section1 = (document: BLCertificate) => {
+const Section1 = (document: BLCertificate): JSX.Element => {
   const { shipper = {}, id, consignee = {}, notifyParty = {} } = document;
   return (
     <div className="d-flex flex-column" style={borderStyle}>

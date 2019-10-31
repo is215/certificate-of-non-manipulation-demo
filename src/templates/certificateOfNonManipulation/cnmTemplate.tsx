@@ -11,7 +11,7 @@ const borderStyle = {
   borderColor: "#000"
 };
 
-const Header = ({ recipient = {}, id }: CNMCertificate) => (
+const Header = ({ recipient = {}, id }: CNMCertificate): JSX.Element => (
   <div className="row">
     <div className="col-12 col-md-6">
       <div className="p-2 h-100" style={borderStyle}>
@@ -49,7 +49,7 @@ const Header = ({ recipient = {}, id }: CNMCertificate) => (
   </div>
 );
 
-const ConsignmentDetails = ({ consignment }: CNMCertificate) => (
+const ConsignmentDetails = ({ consignment }: CNMCertificate): JSX.Element => (
   <div className="row">
     <div className={`p-2 w-100`} style={borderStyle}>
       <strong>2. Details of Consignment</strong>
@@ -152,7 +152,7 @@ const ConsignmentDetails = ({ consignment }: CNMCertificate) => (
   </div>
 );
 
-const Declaration = ({ declaration }: CNMCertificate) => (
+const Declaration = ({ declaration }: CNMCertificate): JSX.Element => (
   <div className="row">
     <div className={`p-2 w-100`} style={borderStyle}>
       <strong>3. Declaration by Shipping Agent/Freight Forwarder</strong>
@@ -189,7 +189,7 @@ const Declaration = ({ declaration }: CNMCertificate) => (
   </div>
 );
 
-const Certification = ({ certification }: CNMCertificate) => (
+const Certification = ({ certification }: CNMCertificate): JSX.Element => (
   <div className="row">
     <div className={`p-2 w-100`} style={borderStyle}>
       <strong>4. Certification by Singapore Customs</strong>

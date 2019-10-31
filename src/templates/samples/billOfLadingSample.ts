@@ -43,8 +43,8 @@ export const blCertificate: BLCertificate = {
     name: "Consignee name"
   },
   notifyParty: {
-    name: "Notify Party Name",
+    name: "Notify Party Name"
   },
   portOfDischarge: "Paris",
-  portOfLoading: "Singapore",
+  portOfLoading: "Singapore"
 };
