@@ -22,3 +22,6 @@ coverage/
 # information for Eclipse / Flash Builder.
 .idea
 *.iml
+
+# Builds
+docs/
