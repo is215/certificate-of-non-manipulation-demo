@@ -1,4 +1,5 @@
 import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from '@storybook/addon-knobs';
 import { BillOfLadingTemplate } from "./billOfLadingTemplate";
 import { blCertificate } from "../samples";
 
@@ -14,8 +15,8 @@ import { blCertificate } from "../samples";
 
 # Usage
 
-<Preview withSource>
+<Preview>
   <Story name="basic sample">
-    <BillOfLadingTemplate document={blCertificate} />
+    <BillOfLadingTemplate document={object("BL Document", blCertificate)} />
   </Story>
 </Preview>
