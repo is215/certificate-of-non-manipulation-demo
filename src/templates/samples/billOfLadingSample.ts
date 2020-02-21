@@ -1,6 +1,7 @@
 import { Document } from "@govtechsg/decentralized-renderer-react-components";
 
 export interface BLCertificate extends Document {
+  blNumber: string;
   vessel: string;
   voyageNo: string;
   portOfLoading: string;
@@ -22,7 +23,7 @@ export interface BLCertificate extends Document {
 }
 
 export const blCertificate: BLCertificate = {
-  id: "SGCNM21566325",
+  blNumber: "SGCNM21566325",
   packages: [
     {
       description: "description",

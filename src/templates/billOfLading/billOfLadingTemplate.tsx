@@ -126,7 +126,7 @@ const Section2 = (document: BLCertificate): JSX.Element => {
 };
 
 const Section1 = (document: BLCertificate): JSX.Element => {
-  const { shipper = {}, id, consignee = {}, notifyParty = {} } = document;
+  const { shipper = {}, blNumber, consignee = {}, notifyParty = {} } = document;
   return (
     <div className="d-flex flex-column" style={borderStyle}>
       {/* Row 1 */}
@@ -147,7 +147,7 @@ const Section1 = (document: BLCertificate): JSX.Element => {
                 SCAC <strong>MAEU</strong>
               </div>
               <div className="p-2" style={{ flex: 1, ...borderStyle }}>
-                B/L No <strong>{id}</strong>
+                B/L No <strong>{blNumber}</strong>
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ const Section1 = (document: BLCertificate): JSX.Element => {
         <div className="col-6 d-flex flex-column justify-content-between">
           <div className="p-1" style={{ flex: 1, ...borderStyle }}>
             <div style={{ fontSize: "0.8em" }}>Booking No</div>
-            <div>{id}</div>
+            <div>{blNumber}</div>
           </div>
           <div className="p-1" style={{ flex: 1, ...borderStyle }}>
             <div style={{ fontSize: "0.8em" }}>Export references</div>
