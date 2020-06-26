@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const BrotliPlugin = require("brotli-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require("webpack");
 const path = require("path");
 
@@ -38,8 +39,8 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
+        use: ["style-loader", "css-loader"]
+      }
     ]
   },
   plugins: [
@@ -49,7 +50,18 @@ module.exports = {
       template: `${__dirname}/static/index.html`
     }),
     ...(IS_PROD
-      ? [new CompressionPlugin({ test: /\.(js|css|html|svg)$/ }), new BrotliPlugin({ test: /\.(js|css|html|svg)$/ })]
+      ? [
+          new CompressionPlugin({ test: /\.(js|css|html|svg)$/ }),
+          new BrotliPlugin({ test: /\.(js|css|html|svg)$/ }),
+          new CopyWebpackPlugin({
+            patterns: [
+              {
+                from: path.resolve(__dirname, "./static/**/*.svg"),
+                to: "./"
+              }
+            ]
+          })
+        ]
       : [])
   ],
   optimization: {
