@@ -132,8 +132,8 @@ const Section1 = (document: BLCertificate): JSX.Element => {
       {/* Row 1 */}
       <div className="d-flex">
         <div className="p-2 col-6" style={{ ...borderStyle }}>
-          <div className="text-center">
-            <img style={{ width: "80px" }} src="/static/logo-aaa-liner.png" />
+          <div className="d-flex align-items-center justify-content-center h-100 text-center">
+            <img style={{ width: "150px" }} src="/static/tradetrust_logo.svg" />
           </div>
         </div>
         <div className="d-flex col-6">
