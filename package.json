@@ -5,7 +5,7 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "dependencies": {
-    "@govtechsg/decentralized-renderer-react-components": "^2.3.0",
+    "@govtechsg/decentralized-renderer-react-components": "1.1.8",
     "@hot-loader/react-dom": "16.10.2",
     "@storybook/addon-knobs": "^5.2.8",
     "bootstrap": "4.3.1",
