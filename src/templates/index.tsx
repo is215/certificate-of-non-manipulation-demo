@@ -6,5 +6,5 @@ export const registry: TemplateRegistry<any> = {
   default: cnmTemplates,
   CERTIFICATE_OF_NON_MANIPULATION: cnmTemplates,
   BILL_OF_LADING: blTemplates,
-  NULL: []
+  NULL: [],
 };

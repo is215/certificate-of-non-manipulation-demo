@@ -5,11 +5,13 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "dependencies": {
-    "@govtechsg/decentralized-renderer-react-components": "^2.3.0",
+    "@govtechsg/decentralized-renderer-react-components": "^2.3.3",
     "@hot-loader/react-dom": "16.10.2",
     "@storybook/addon-knobs": "^5.2.8",
+    "@types/qrcode.react": "^1.0.1",
     "bootstrap": "4.3.1",
     "debug": "4.1.1",
+    "qrcode.react": "^1.0.0",
     "react": "16.10.2",
     "react-dom": "16.10.2",
     "react-hot-loader": "4.12.15"
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.6.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
     "@babel/preset-typescript": "7.6.0",
@@ -58,11 +61,11 @@
     "file-loader": "4.2.0",
     "html-webpack-plugin": "3.2.0",
     "jest": "24.9.0",
-    "prettier": "1.18.2",
+    "prettier": "^2.1.1",
     "react-docgen-typescript-loader": "3.3.0",
     "semantic-release": "15.13.26",
     "style-loader": "^1.0.0",
-    "typescript": "3.6.4",
+    "typescript": "^3.7.4",
     "webpack": "4.41.2",
     "webpack-cli": "3.3.9",
     "webpack-dev-server": "3.8.2"
@@ -80,6 +83,9 @@
       ],
       "@babel/preset-typescript",
       "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-optional-chaining"
     ]
   },
   "browserslist": [

@@ -4,6 +4,6 @@ export const templates = [
   {
     id: "default",
     label: "Document",
-    template: BillOfLadingTemplate
-  }
+    template: BillOfLadingTemplate,
+  },
 ];

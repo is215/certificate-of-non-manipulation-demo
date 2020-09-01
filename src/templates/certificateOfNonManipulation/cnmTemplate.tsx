@@ -8,7 +8,7 @@ import { CNMCertificate } from "../samples";
 const borderStyle = {
   borderStyle: "solid",
   borderWidth: 0.5,
-  borderColor: "#000"
+  borderColor: "#000",
 };
 
 const Header = ({ recipient = {}, id }: CNMCertificate): JSX.Element => (
@@ -67,10 +67,9 @@ const ConsignmentDetails = ({ consignment }: CNMCertificate): JSX.Element => (
       <div className="p-2 h-100" style={borderStyle}>
         <div>Quantity/ Gross Weight</div>
         <pre className="p-2">
-          <div>{`${(consignment && consignment.quantity && consignment.quantity.value) || ""} ${(consignment &&
-            consignment.quantity &&
-            consignment.quantity.unit) ||
-            ""}`}</div>
+          <div>{`${(consignment && consignment.quantity && consignment.quantity.value) || ""} ${
+            (consignment && consignment.quantity && consignment.quantity.unit) || ""
+          }`}</div>
         </pre>
       </div>
     </div>

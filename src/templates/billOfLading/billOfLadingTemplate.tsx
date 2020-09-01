@@ -3,11 +3,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
 import { BLCertificate } from "../samples";
+import { DocumentQrCode } from "./DocumentQrCode";
 
 const borderStyle = {
   borderStyle: "solid",
   borderWidth: 0.5,
-  borderColor: "#000"
+  borderColor: "#000",
 };
 
 const smallText = (text: string): JSX.Element => <div style={{ fontSize: "0.8em" }}>{text}</div>;
@@ -236,16 +237,22 @@ const Section1 = (document: BLCertificate): JSX.Element => {
   );
 };
 
-export const BillOfLadingTemplate: FunctionComponent<TemplateProps<BLCertificate>> = ({ document }) => (
-  // Section 1
-  <div className="container">
-    {Section1(document)}
-    <br />
-    <div className="text-center">
-      <strong>PARTICULARS FURNISHED BY SHIPPER</strong>
+export const BillOfLadingTemplate: FunctionComponent<TemplateProps<BLCertificate>> = ({ document }) => {
+  const qrCodeUrl = document?.links?.self.href;
+  return (
+    // Section 1
+    <div>
+      <div className="container">
+        {Section1(document)}
+        <br />
+        <div className="text-center">
+          <strong>PARTICULARS FURNISHED BY SHIPPER</strong>
+        </div>
+        {Section2(document)}
+        <br />
+        {Section3()}
+      </div>
+      {qrCodeUrl && <DocumentQrCode url={qrCodeUrl} />}
     </div>
-    {Section2(document)}
-    <br />
-    {Section3()}
-  </div>
-);
+  );
+};
