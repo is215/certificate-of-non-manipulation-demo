@@ -18,7 +18,7 @@ export const DocumentQrCode: FunctionComponent<DocumentQrCode> = ({ url, size = 
     }}
   >
     <QRCode value={url} size={size} />
-    <div style={{ fontSize: 32, marginLeft: 64 }}>Scan the QR code with your phone camera.</div>
+    <div style={{ fontSize: 32, marginLeft: 64 }}>Scan the QR code with a QR code scanner device.</div>
     <div className="genterated-text">Automatically Generated</div>
   </div>
 );

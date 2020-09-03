@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
 import { BLCertificate } from "../samples";
-import { DocumentQrCode } from "./DocumentQrCode";
+import { DocumentQrCode } from "../../core/DocumentQrCode";
 
 const borderStyle = {
   borderStyle: "solid",

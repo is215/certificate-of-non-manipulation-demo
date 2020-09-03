@@ -4,6 +4,7 @@ import "./style.css";
 import style from "./template.module.css";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
 import { CNMCertificate } from "../samples";
+import { DocumentQrCode } from "../../core/DocumentQrCode";
 
 const borderStyle = {
   borderStyle: "solid",
@@ -234,13 +235,17 @@ const Certification = ({ certification }: CNMCertificate): JSX.Element => (
   </div>
 );
 
-export const CnmTemplate: FunctionComponent<TemplateProps<CNMCertificate>> = ({ document }) => (
-  <div className="container p-0" style={{ borderStyle: "solid", borderWidth: 1 }}>
-    <div className="p-0">
-      {Header(document)}
-      {ConsignmentDetails(document)}
-      {Declaration(document)}
-      {Certification(document)}
+export const CnmTemplate: FunctionComponent<TemplateProps<CNMCertificate>> = ({ document }) => {
+  const qrCodeUrl = document?.links?.self.href;
+  return (
+    <div className="container p-0" style={{ borderStyle: "solid", borderWidth: 1 }}>
+      <div className="p-0">
+        {Header(document)}
+        {ConsignmentDetails(document)}
+        {Declaration(document)}
+        {Certification(document)}
+      </div>
+      {qrCodeUrl && <DocumentQrCode url={qrCodeUrl} />}
     </div>
-  </div>
-);
+  );
+};
