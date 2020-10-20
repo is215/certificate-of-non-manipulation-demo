@@ -81,11 +81,11 @@ const Section3 = (): JSX.Element => (
       <div className="col-6 p-2" style={borderStyle}>
         <div>
           {smallText(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis id consectetur purus ut faucibus. Diam quam nulla porttitor massa. Eu tincidunt tortor aliquam nulla facilisi cras fermentum. Amet mauris commodo quis imperdiet massa tincidunt. Luctus accumsan tortor posuere ac ut. Eu volutpat odio facilisis mauris sit amet massa vitae tortor. Eros donec ac odio tempor orci dapibus. Varius morbi enim nunc faucibus a pellentesque sit amet. Velit aliquet sagittis id consectetur purus ut. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Odio ut sem nulla pharetra diam sit. Nunc sed augue lacus viverra vitae congue eu consequat ac. Eros in cursus turpis massa tincidunt dui ut ornare lectus."
+            "The above particulars are according to the declaration of the Shipper. The Carrier received the above goods in apparent good order and condition, unless otherwise specified, for carriage to the place as agreed above subject to the terms of this Bill of Lading, including those on the back pages. If required by the Carrier, the electronic copy of this Bill of Lading must be surrendered in exchange for the goods or deliver order. In witness whereof the original Bill of Lading has been electronically signed, one of which being accomplished the other(s) to be void. IN ACCEPTING THIS BILL OF LADING, the Shipper, Consignee, Holder hereof, and Owner of the goods, agree to be bound by all its stipulations, exceptions and conditions, whether written, printed or stamped on the front or back hereof, as well as the provisions above Carrier's published Tariff Rules and Regulations."
           )}
         </div>
         <div className="text-center mt-3 mb-5">
-          <strong>{smallText("Signed for the Carrier A.P. Moller - Maersk A/S trading as Maersk Line")}</strong>
+          <strong>{smallText("Signed for the Carrier - Eastern Pacific Shipping")}</strong>
         </div>
         <hr />
         <div className="text-center mt-2">
@@ -134,7 +134,7 @@ const Section1 = (document: BLCertificate): JSX.Element => {
       <div className="d-flex">
         <div className="p-2 col-6" style={{ ...borderStyle }}>
           <div className="d-flex align-items-center justify-content-center h-100 text-center">
-            <img style={{ width: "150px" }} src="/static/tradetrust_logo.svg" />
+            <img style={{ width: "150px" }} src="/static/eps-logo-colour.png" />
           </div>
         </div>
         <div className="d-flex col-6">
@@ -174,7 +174,7 @@ const Section1 = (document: BLCertificate): JSX.Element => {
           </div>
           <div className="p-1" style={{ flex: 1, ...borderStyle }}>
             <div style={{ fontSize: "0.8em" }}>
-              Onward inland routing (Not part of Carriage as defined in clasuse 1. For account and risk of Merchant)
+              Onward inland routing (Not part of Carriage as defined in clause 1. For account and risk of Merchant)
             </div>
           </div>
         </div>

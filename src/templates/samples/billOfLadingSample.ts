@@ -28,7 +28,7 @@ export interface BLCertificate extends Document {
 }
 
 export const blCertificate: BLCertificate = {
-  blNumber: "SGCNM21566325",
+  blNumber: "EPSJ5197SPARES",
   packages: [
     {
       description: "description",
@@ -37,22 +37,22 @@ export const blCertificate: BLCertificate = {
     },
   ],
   shipper: {
-    name: "Shipper Name",
+    name: "Lo Siaw Ling",
     address: {
-      street: "101 ORCHARD ROAD",
-      country: "SINGAPORE",
+      street: "81 Victoria St",
+      country: "Singapore 188065",
     },
   },
-  vessel: "vessel",
-  voyageNo: "voyageNo",
+  vessel: "KARA SEA",
+  voyageNo: "05197",
   consignee: {
     name: "Consignee name",
   },
   notifyParty: {
     name: "Notify Party Name",
   },
-  portOfDischarge: "Paris",
-  portOfLoading: "Singapore",
+  portOfDischarge: "Port of Singapore",
+  portOfLoading: "Shenzhen Bay Port",
   links: {
     self: {
       href:
