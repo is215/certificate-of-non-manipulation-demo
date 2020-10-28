@@ -4,6 +4,7 @@ import "./style.css";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
 import { BLCertificate } from "../samples";
 import { DocumentQrCode } from "./DocumentQrCode";
+import * as EPSLogo from "./eps-logo-colour.png";
 
 const borderStyle = {
   borderStyle: "solid",
@@ -134,7 +135,7 @@ const Section1 = (document: BLCertificate): JSX.Element => {
       <div className="d-flex">
         <div className="p-2 col-6" style={{ ...borderStyle }}>
           <div className="d-flex align-items-center justify-content-center h-100 text-center">
-            <img style={{ width: "150px" }} src="/static/eps-logo-colour.png" />
+            <img style={{ width: "150px" }} src={EPSLogo} />
           </div>
         </div>
         <div className="d-flex col-6">
